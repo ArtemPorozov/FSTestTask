@@ -12,7 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+//        view.backgroundColor = .red
+//
+//        navigationController.navigationBar.prefersLargeTitles = true
+//        navigationController.navigationBar.backgroundColor = .white
+//        navigationController.tabBarItem.title = title
+//        navigationController.tabBarItem.image = UIImage(named: imageName)
+//
+//        viewController.navigationItem.title = title
+//        viewController.view.backgroundColor = .white
     }
 
 

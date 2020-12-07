@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,19 @@
 		045725EC257A8785009903D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045725EA257A8785009903D1 /* Main.storyboard */; };
 		045725EE257A8790009903D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045725ED257A8790009903D1 /* Assets.xcassets */; };
 		045725F1257A8790009903D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045725EF257A8790009903D1 /* LaunchScreen.storyboard */; };
+		045725F9257BB568009903D1 /* AlbumSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045725F8257BB568009903D1 /* AlbumSearchController.swift */; };
+		045725FD257BB8A0009903D1 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045725FC257BB8A0009903D1 /* SearchResultCell.swift */; };
+		045725FF257BB902009903D1 /* VerticalStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045725FE257BB902009903D1 /* VerticalStackView.swift */; };
+		04572601257BB990009903D1 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572600257BB990009903D1 /* UIView+Constraints.swift */; };
+		04572607257BBEBE009903D1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572606257BBEBE009903D1 /* Service.swift */; };
+		0457260A257BBF58009903D1 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572609257BBF58009903D1 /* SearchResult.swift */; };
+		0457260C257BC291009903D1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457260B257BC291009903D1 /* Extensions.swift */; };
+		0457260F257BF4D4009903D1 /* AlbumDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0457260E257BF4D4009903D1 /* AlbumDetailsController.swift */; };
+		04572611257BF7D2009903D1 /* AlbumDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572610257BF7D2009903D1 /* AlbumDetailsCell.swift */; };
+		04572613257C4CBE009903D1 /* AlbumHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572612257C4CBE009903D1 /* AlbumHeader.swift */; };
+		04572615257D1E86009903D1 /* AlbumFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572614257D1E86009903D1 /* AlbumFooter.swift */; };
+		04572617257E7D45009903D1 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04572616257E7D45009903D1 /* BaseListController.swift */; };
+		EF7E4FDF265AC8919F0CC321 /* Pods_ForaSoftTestTaskIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D1D5BE3D425C55D8211D9F /* Pods_ForaSoftTestTaskIOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,21 @@
 		045725ED257A8790009903D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		045725F0257A8790009903D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		045725F2257A8790009903D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045725F8257BB568009903D1 /* AlbumSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchController.swift; sourceTree = "<group>"; };
+		045725FC257BB8A0009903D1 /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
+		045725FE257BB902009903D1 /* VerticalStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalStackView.swift; sourceTree = "<group>"; };
+		04572600257BB990009903D1 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
+		04572606257BBEBE009903D1 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		04572609257BBF58009903D1 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
+		0457260B257BC291009903D1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0457260E257BF4D4009903D1 /* AlbumDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsController.swift; sourceTree = "<group>"; };
+		04572610257BF7D2009903D1 /* AlbumDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailsCell.swift; sourceTree = "<group>"; };
+		04572612257C4CBE009903D1 /* AlbumHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumHeader.swift; sourceTree = "<group>"; };
+		04572614257D1E86009903D1 /* AlbumFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumFooter.swift; sourceTree = "<group>"; };
+		04572616257E7D45009903D1 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
+		2D1937DAFC8B37D95D102FCF /* Pods-ForaSoftTestTaskIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForaSoftTestTaskIOS.release.xcconfig"; path = "Target Support Files/Pods-ForaSoftTestTaskIOS/Pods-ForaSoftTestTaskIOS.release.xcconfig"; sourceTree = "<group>"; };
+		5649F0CE105B91AD1340C5FC /* Pods-ForaSoftTestTaskIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForaSoftTestTaskIOS.debug.xcconfig"; path = "Target Support Files/Pods-ForaSoftTestTaskIOS/Pods-ForaSoftTestTaskIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		C1D1D5BE3D425C55D8211D9F /* Pods_ForaSoftTestTaskIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForaSoftTestTaskIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF7E4FDF265AC8919F0CC321 /* Pods_ForaSoftTestTaskIOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +71,8 @@
 			children = (
 				045725E3257A8785009903D1 /* ForaSoftTestTaskIOS */,
 				045725E2257A8785009903D1 /* Products */,
+				E31BF9B6DB7D7CB687731C99 /* Pods */,
+				C7EE81D056F1A1D95938DF8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +87,92 @@
 		045725E3257A8785009903D1 /* ForaSoftTestTaskIOS */ = {
 			isa = PBXGroup;
 			children = (
+				04572605257BBEA8009903D1 /* Service */,
+				04572608257BBF35009903D1 /* Model */,
+				04572602257BB9C2009903D1 /* Views */,
+				04572604257BB9F7009903D1 /* Controllers */,
+				04572603257BB9D5009903D1 /* Helpers */,
+				045725E8257A8785009903D1 /* ViewController.swift */,
 				045725E4257A8785009903D1 /* AppDelegate.swift */,
 				045725E6257A8785009903D1 /* SceneDelegate.swift */,
-				045725E8257A8785009903D1 /* ViewController.swift */,
 				045725EA257A8785009903D1 /* Main.storyboard */,
 				045725ED257A8790009903D1 /* Assets.xcassets */,
 				045725EF257A8790009903D1 /* LaunchScreen.storyboard */,
 				045725F2257A8790009903D1 /* Info.plist */,
 			);
 			path = ForaSoftTestTaskIOS;
+			sourceTree = "<group>";
+		};
+		04572602257BB9C2009903D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				045725FC257BB8A0009903D1 /* SearchResultCell.swift */,
+				04572610257BF7D2009903D1 /* AlbumDetailsCell.swift */,
+				04572612257C4CBE009903D1 /* AlbumHeader.swift */,
+				04572614257D1E86009903D1 /* AlbumFooter.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04572603257BB9D5009903D1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				04572600257BB990009903D1 /* UIView+Constraints.swift */,
+				045725FE257BB902009903D1 /* VerticalStackView.swift */,
+				0457260B257BC291009903D1 /* Extensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		04572604257BB9F7009903D1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				04572616257E7D45009903D1 /* BaseListController.swift */,
+				045725F8257BB568009903D1 /* AlbumSearchController.swift */,
+				0457260D257BF4AC009903D1 /* Details */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		04572605257BBEA8009903D1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04572606257BBEBE009903D1 /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		04572608257BBF35009903D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04572609257BBF58009903D1 /* SearchResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0457260D257BF4AC009903D1 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				0457260E257BF4D4009903D1 /* AlbumDetailsController.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		C7EE81D056F1A1D95938DF8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1D1D5BE3D425C55D8211D9F /* Pods_ForaSoftTestTaskIOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E31BF9B6DB7D7CB687731C99 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5649F0CE105B91AD1340C5FC /* Pods-ForaSoftTestTaskIOS.debug.xcconfig */,
+				2D1937DAFC8B37D95D102FCF /* Pods-ForaSoftTestTaskIOS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 045725F5257A8790009903D1 /* Build configuration list for PBXNativeTarget "ForaSoftTestTaskIOS" */;
 			buildPhases = (
+				D2FACC1EC2ABFAC758C7DB8A /* [CP] Check Pods Manifest.lock */,
 				045725DD257A8785009903D1 /* Sources */,
 				045725DE257A8785009903D1 /* Frameworks */,
 				045725DF257A8785009903D1 /* Resources */,
+				E62F5C5F6D61E47D4DFC88E2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +243,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D2FACC1EC2ABFAC758C7DB8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForaSoftTestTaskIOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E62F5C5F6D61E47D4DFC88E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ForaSoftTestTaskIOS/Pods-ForaSoftTestTaskIOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ForaSoftTestTaskIOS/Pods-ForaSoftTestTaskIOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ForaSoftTestTaskIOS/Pods-ForaSoftTestTaskIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		045725DD257A8785009903D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04572613257C4CBE009903D1 /* AlbumHeader.swift in Sources */,
 				045725E9257A8785009903D1 /* ViewController.swift in Sources */,
+				0457260A257BBF58009903D1 /* SearchResult.swift in Sources */,
+				045725F9257BB568009903D1 /* AlbumSearchController.swift in Sources */,
 				045725E5257A8785009903D1 /* AppDelegate.swift in Sources */,
+				045725FD257BB8A0009903D1 /* SearchResultCell.swift in Sources */,
+				0457260F257BF4D4009903D1 /* AlbumDetailsController.swift in Sources */,
+				04572607257BBEBE009903D1 /* Service.swift in Sources */,
 				045725E7257A8785009903D1 /* SceneDelegate.swift in Sources */,
+				04572611257BF7D2009903D1 /* AlbumDetailsCell.swift in Sources */,
+				045725FF257BB902009903D1 /* VerticalStackView.swift in Sources */,
+				0457260C257BC291009903D1 /* Extensions.swift in Sources */,
+				04572615257D1E86009903D1 /* AlbumFooter.swift in Sources */,
+				04572617257E7D45009903D1 /* BaseListController.swift in Sources */,
+				04572601257BB990009903D1 /* UIView+Constraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +446,7 @@
 		};
 		045725F6257A8790009903D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5649F0CE105B91AD1340C5FC /* Pods-ForaSoftTestTaskIOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,12 +459,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aporozov.ForaSoftTestTaskIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		045725F7257A8790009903D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D1937DAFC8B37D95D102FCF /* Pods-ForaSoftTestTaskIOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,7 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.aporozov.ForaSoftTestTaskIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
