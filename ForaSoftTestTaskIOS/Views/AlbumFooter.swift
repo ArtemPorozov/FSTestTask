@@ -12,7 +12,15 @@ final class AlbumFooter: UICollectionReusableView {
     
     // MARK: - Public Properties
     
-    var copyrightLabel: UILabel = {
+    var song: Result? {
+        didSet {
+            copyrightLabel.text = song?.copyright
+        }
+    }
+    
+    // MARK: - Private Properties
+
+    private let copyrightLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
         label.font = .systemFont(ofSize: 16)

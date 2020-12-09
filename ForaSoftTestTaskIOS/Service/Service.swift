@@ -10,7 +10,7 @@ import Foundation
 
 class Service {
     
-     // singleton
+    // singleton
     static let shared = Service()
     
     private init() {}
@@ -26,10 +26,8 @@ class Service {
         let urlString = "https://itunes.apple.com/lookup?id=\(collectionId)&entity=song"
         fetchGenericJSONData(urlString: urlString, completion: completion)
     }
-
-    // add response
     
-    func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?, Error?) -> ()) {
+    private func fetchGenericJSONData<T: Decodable>(urlString: String, completion: @escaping (T?, Error?) -> ()) {
         
         guard let url = URL(string: urlString) else { return }
         
@@ -41,13 +39,16 @@ class Service {
                 return
             }
             
+            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
+                print("Server error")
+                return
+            }
+            
             guard let data = data else { return }
             
             do {
                 let objects = try JSONDecoder().decode(T.self, from: data)
-                
                 completion(objects, nil)
-                
             } catch let jsonError {
                 completion(nil, jsonError)
             }

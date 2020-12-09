@@ -12,7 +12,18 @@ final class AlbumDetailsCell: UICollectionViewCell {
     
     // MARK: - Public Properties
     
-    let songNumberLabel: UILabel = {
+    var song: Result? {
+        didSet {
+            if let trackNumber = song?.trackNumber {
+                songNumberLabel.text = String(trackNumber)
+            }
+            songNameLabel.text = song?.trackName
+        }
+    }
+    
+    // MARK: - Private Properties
+
+    private let songNumberLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18)
         label.textAlignment = .center
@@ -22,15 +33,13 @@ final class AlbumDetailsCell: UICollectionViewCell {
         return label
     }()
     
-    var songNameLabel: UILabel = {
+    private let songNameLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 18)
         label.textAlignment = .left
         label.backgroundColor = .white
         return label
     }()
-    
-    // MARK: - Private Properties
     
     private let stackView = UIStackView(frame: .zero)
     

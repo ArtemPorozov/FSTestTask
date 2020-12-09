@@ -59,7 +59,7 @@ final class AlbumDetailsController: BaseListController {
         Service.shared.fetchSongs(collectionId: collectionId) { (result, error) in
             
             if error != nil {
-                print("Failed to fetch apps:", error as Any)
+                print("Failed to fetch albums:", error?.localizedDescription as Any)
                 return
             }
             
@@ -81,9 +81,7 @@ final class AlbumDetailsController: BaseListController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: detailCellId, for: indexPath) as! AlbumDetailsCell
-        let song = self.songs[indexPath.item + 1]
-        cell.songNumberLabel.text = "\(indexPath.item + 1)"
-        cell.songNameLabel.text = song.trackName
+        cell.song = self.songs[indexPath.item + 1]
         return cell
     }
 
@@ -92,22 +90,13 @@ final class AlbumDetailsController: BaseListController {
         switch kind {
             
         case UICollectionView.elementKindSectionHeader:
-            
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerId, for: indexPath) as! AlbumHeader
-            
-            // grabbing hi-res quality album art
-            let albumUrl = songs.first?.artworkUrl100
-            let albumUrl600 = albumUrl?.replacingOccurrences(of: "100x100bb", with: "600x600bb")
-            
-            header.imageView.sd_setImage(with: URL(string: albumUrl600 ?? ""))
-            header.albumNameLabel.text = songs.first?.collectionName
-            header.genreLabel.text = songs.first?.primaryGenreName
-            
+            header.song = songs.first
             return header
             
         case UICollectionView.elementKindSectionFooter:
             let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerId, for: indexPath) as! AlbumFooter
-            footer.copyrightLabel.text = songs.first?.copyright
+            footer.song = songs.first
             return footer
             
         default:

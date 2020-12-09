@@ -29,7 +29,6 @@ final class AlbumSearchController: BaseListController {
     private var albumResultsSorted = [Result]()
     
     private var timer: Timer?
-
     
     // MARK: - Lifecycle
 
@@ -55,13 +54,10 @@ final class AlbumSearchController: BaseListController {
     }
 
     private func setupSearchBar() {
-        // read about
-        definesPresentationContext = true
         navigationItem.searchController = self.searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchBar.delegate = self
     }
-    
     
     // MARK: - Collection View Delegate
 
@@ -75,22 +71,13 @@ final class AlbumSearchController: BaseListController {
     // MARK: - Collection View Data Source
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         enterSearchTermLabel.isHidden = albumResultsSorted.count != 0
         return albumResultsSorted.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! SearchResultCell
-//        cell.appResult = appResults[indexPath.item]
-        
-        let album = albumResultsSorted[indexPath.item]
-
-        cell.nameLabel.text = album.collectionName
-        cell.imageView.sd_setImage(with: URL(string: album.artworkUrl100))
-        cell.subtitleLabel.text = "\(album.collectionType!) • \(album.artistName)"
-        
+        cell.album = albumResultsSorted[indexPath.item]
         return cell
     }
     
@@ -116,20 +103,19 @@ extension AlbumSearchController: UISearchBarDelegate {
                 
         // introduce some delay before performing the search
         // throttling the search
-        
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { (_) in
             
             Service.shared.fetchAlbums(searchTerm: searchText) { (result, error) in
                 
                 if error != nil {
-                    print("Failed to fetch apps:", error as Any)
+                    print("Failed to fetch albums:", error?.localizedDescription as Any)
                     return
                 }
                 
                 self.albumResults = result?.results ?? []
                 
-                // add sorting
+                // getting sorted albums array
                 self.albumResultsSorted = self.albumResults.sorted { $0.collectionName < $1.collectionName }
                 
                 DispatchQueue.main.async {

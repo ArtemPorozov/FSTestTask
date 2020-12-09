@@ -12,7 +12,20 @@ final class AlbumHeader: UICollectionReusableView {
     
     // MARK: - Public Properties
     
-    var imageView: UIImageView = {
+    var song: Result? {
+        didSet {
+            // grabbing hi-res quality album art
+            if let albumUrl600 = song?.artworkUrl100.replacingOccurrences(of: "100x100bb", with: "600x600bb") {
+                imageView.sd_setImage(with: URL(string: albumUrl600))
+            }
+            albumNameLabel.text = song?.collectionName
+            genreLabel.text = song?.primaryGenreName
+        }
+    }
+    
+    // MARK: - Private Properties
+
+    private let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.cornerRadius = 4
         imageView.clipsToBounds = true
@@ -20,14 +33,14 @@ final class AlbumHeader: UICollectionReusableView {
         return imageView
         }()
     
-    var albumNameLabel: UILabel = {
+    private let albumNameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
         label.font = .boldSystemFont(ofSize: 20)
         return label
     }()
     
-    var genreLabel: UILabel = {
+    private let genreLabel: UILabel = {
         let label = UILabel()
         label.textColor = .gray
         label.textAlignment = .center

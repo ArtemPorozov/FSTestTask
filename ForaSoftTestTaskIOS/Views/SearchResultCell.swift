@@ -12,11 +12,21 @@ final class SearchResultCell: UICollectionViewCell {
     
     // MARK: - Public Properties
     
-    let imageView = UIImageView(cornerRadius: 4)
-    let nameLabel = UILabel(text: "Album Name", font: .boldSystemFont(ofSize: 18))
-    let subtitleLabel = UILabel(text: "Subtitle Label", font: .systemFont(ofSize: 16), numberOfLines: 2)
+    var album: Result? {
+        didSet {
+            nameLabel.text = album?.collectionName
+            if let albumUrl = album?.artworkUrl100 {
+                imageView.sd_setImage(with: URL(string: albumUrl))
+            }
+            subtitleLabel.text = "\(album!.collectionType!) • \(album!.artistName)"
+        }
+    }
     
     // MARK: - Private Properties
+
+    private let imageView = UIImageView(cornerRadius: 4)
+    private let nameLabel = UILabel(text: "Album Name", font: .boldSystemFont(ofSize: 18))
+    private let subtitleLabel = UILabel(text: "Subtitle Label", font: .systemFont(ofSize: 16), numberOfLines: 2)
     
     private let separatorView: UIView = {
         let view = UIView()
