@@ -21,7 +21,7 @@ final class AlbumSearchController: BaseListController {
         let label = UILabel()
         label.text = "Please enter album name to start searching"
         label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 18)
+        label.font = UIFont.systemFont(ofSize: 16)
         return label
     }()
     
